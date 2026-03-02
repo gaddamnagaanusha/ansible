@@ -1,0 +1,16 @@
+- name: variable preference
+  hosts: local
+  connection: local
+  vars:
+    course: "ansible from play level"            #play level variable
+  vars_files:
+    - course.yaml                                #importing variables from external file and it will override play level variable
+  vars_prompt:                                   #prompting user for variable value and it will override play level and file level variable
+  - name: course
+    prompt:  "Enter course name"
+  tasks: 
+  - name: print course details
+    vars:                                        #task level variable and it will override play level, file level and prompt variable
+      course: "ansible from task level"
+    ansible.builtin.debug:
+      msg: "course: {{ course }}"  
