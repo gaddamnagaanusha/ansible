@@ -1,14 +1,13 @@
 - name: ansible variables
-   hosts: local
-   connection: local
-   become: yes
-   vars:
-     course: "ansible for beginners"
-     duration: "2 hours"
-     trainer: "Anusha"
-   tasks:
-     - name: print course details
-       ansible.builtin.debug:
-         msg: "course: {{ course }}, duration: {{ duration }}, trainer: {{ trainer }}"
+  hosts: local
+  connection: local
+  vars:
+    course: "ansible for beginners"
+    duration: "2 hours"
+    trainer: "Anusha"
+  tasks:
+  - name: print course details
+    ansible.builtin.debug:
+      msg: "course: {{ course }}, duration: {{ duration }}, trainer: {{ trainer }}"
 
 
