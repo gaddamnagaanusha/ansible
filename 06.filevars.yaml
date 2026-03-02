@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars_files:  
-    - course.yaml
+    - course.yaml         #importing variables from external file
   # vars:
   #   course: "ansible for beginners"     #playlevel variable
   #   duration: "2 hours"
