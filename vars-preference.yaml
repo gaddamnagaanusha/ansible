@@ -8,9 +8,10 @@
   vars_prompt:                                   #prompting user for variable value and it will override play level and file level variable
   - name: course
     prompt:  "Enter course name"
+    private: no
   tasks: 
   - name: print course details
     vars:                                        #task level variable and it will override play level, file level and prompt variable
       course: "ansible from task level"
     ansible.builtin.debug:
-      msg: "course: {{ course }}"  
+      msg: "course: {{ course }}"                #it will print task level variable value as it has highest preference
