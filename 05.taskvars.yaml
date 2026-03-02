@@ -1,12 +1,10 @@
 - name: ansible variables
   hosts: local
   connection: local
-  vars_files:  
-    - 06.course.yaml
-  # vars:
-  #   course: "ansible for beginners"     #playlevel variable
-  #   duration: "2 hours"
-  #   trainer: "Anusha"
+  vars:
+    course: "ansible for beginners"     #playlevel variable
+    duration: "2 hours"
+    trainer: "Anusha"
   tasks:
   - name: print course details
     vars:
