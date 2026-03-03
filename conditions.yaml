@@ -1,0 +1,10 @@
+- name: demo on conditions
+  hosts: local
+  connection: local
+  vars:
+    is_valid: true
+  tasks:
+  - name: print valid message
+    ansible.builtin.debug:
+      msg: "This is valid"
+      when: is_valid
