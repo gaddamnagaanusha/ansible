@@ -2,7 +2,8 @@
   hosts: local
   connection: local
   vars:
-    is_valid: false
+      is_valid: true
+    # is_valid: false     #skipping the task as the condition is false
   tasks:
   - name: print valid message
     ansible.builtin.debug:
