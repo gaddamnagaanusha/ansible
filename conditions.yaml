@@ -7,4 +7,4 @@
   - name: print valid message
     ansible.builtin.debug:
       msg: "This is valid"
-      when: is_valid
+    when: is_valid
