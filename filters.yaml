@@ -4,7 +4,7 @@
   vars:
     topics: linux, shell, ansible, terraform, devops
     course: "ansible for beginners"
-    ip: "192.168.1.1"
+    ip: "256.654.845.11"  #invalid IP address
     tags:                            #dictionary variable
       name: ansible
       project: roboshop
@@ -32,4 +32,5 @@
        msg: "Course: {{ course | lower }}"   #using lower filter to convert string to lowercase
    - name: check if ip is valid
      ansible.builtin.debug:
-       msg: "IP: {{ ip | ansible.utils.ipv4}}"   #using ipaddr filter to check if the IP address is valid
+       msg: "IP: {{ ip | ansible.utils.ipv4}}"   #pip3.9 install netaddr
+       #using ipaddr filter to check if the IP address is valid
