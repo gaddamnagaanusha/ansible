@@ -3,7 +3,8 @@
   connection: local
   vars:
     topics: linux, shell, ansible, terraform, devops
-    tags:
+    course: "ansible for beginners"
+    tags:                            #dictionary variable
       name: ansible
       project: roboshop
       component: catalogue  
@@ -20,3 +21,11 @@
    - name: convert map to list
      ansible.builtin.debug:
        msg: "Tags: {{ tags | dict2items }}"   #using dict2items filter to convert dictionary into list of dictionaries with key and value as keys 
+  
+   - name: convert to upper
+     ansible.builtin.debug:
+       msg: "Course: {{ course | upper }}"   #using upper filter to convert string to uppercase
+
+   - name: convert to lower
+     ansible.builtin.debug:
+       msg: "Course: {{ course | lower }}"   #using lower filter to convert string to lowercase
