@@ -4,4 +4,4 @@
   tasks:
     - name: checking command module
       ansible.builtin.command: cat /etc/passwd | grep root
-      register: {{ users_output }}
+      register: users_output 
