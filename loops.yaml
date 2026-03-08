@@ -4,7 +4,7 @@
   tasks:
   - name: print names
     ansible.builtin.debug:
-      msg: "Hello {{ item }}"
+      msg: "Hello {{ item }}" #item is reserved keyword in ansible and it will hold the current item value in the loop
     loop:
     - Anusha
     - Manikanta
