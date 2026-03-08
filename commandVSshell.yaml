@@ -1,6 +1,6 @@
 - name: command vs shell
-hosts: local
-connection: local
+  hosts: local
+  connection: local
 tasks:
 - name: checking command module
   ansible.builtin.command: cat /etc/passwd | grep root
