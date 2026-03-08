@@ -4,6 +4,7 @@
   vars:
     topics: linux, shell, ansible, terraform, devops
     course: "ansible for beginners"
+    ip: "192.168.1.1"
     tags:                            #dictionary variable
       name: ansible
       project: roboshop
@@ -29,3 +30,6 @@
    - name: convert to lower
      ansible.builtin.debug:
        msg: "Course: {{ course | lower }}"   #using lower filter to convert string to lowercase
+   - name: check if ip is valid
+     ansible.builtin.debug:
+       msg: "IP: {{ ip | ansible.utils.ipv4}}"   #using ipaddr filter to check if the IP address is valid
