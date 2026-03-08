@@ -1,0 +1,12 @@
+- name: demo on error handling
+  hosts: local
+  connection: local
+  tasks:
+  - name: check user exists or not
+    ansible.builtin.command: id roboshop
+    register: result
+    ignore_errors: yes   #it will ignore the error and continue with next task
+
+  - name: print results
+    ansible.builtin.debug:
+      msg: "{{ result }}"
