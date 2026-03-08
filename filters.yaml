@@ -3,6 +3,10 @@
   connection: local
   vars:
     topics: linux, shell, ansible, terraform, devops
+  tags:
+    name: ansible
+    project: roboshop
+    component: catalogue  
   tasks:
    - name: greetings
      ansible.builtin.debug:
@@ -11,4 +15,8 @@
 
    - name: print topics as list
      ansible.builtin.debug:
-       msg: "Topics: {{ topics | split(', ') }}"
+       msg: "Topics: {{ topics | split(', ') }}"   #using split filter to convert string into list based on the separator provided
+
+   - name: convert map to list
+     ansible.builtin.debug:
+       msg: "Tags: {{ tags | dict2items }}"   #using dict2items filter to convert dictionary into list of dictionaries with key and value as keys 
