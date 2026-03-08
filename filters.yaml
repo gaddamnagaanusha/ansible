@@ -5,6 +5,7 @@
     topics: linux, shell, ansible, terraform, devops
     course: "ansible for beginners"
     ip: "256.654.845.11"  #invalid IP address
+    # ip: "192.168.1.1" #valid IP address
     tags:                            #dictionary variable
       name: ansible
       project: roboshop
