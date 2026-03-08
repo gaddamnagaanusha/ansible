@@ -11,4 +11,4 @@
 
    - name: print topics as list
      ansible.builtin.debug:
-       msg: "Topics: {{ topics | join(', ') }}"
+       msg: "Topics: {{ topics | split(', ') }}"
