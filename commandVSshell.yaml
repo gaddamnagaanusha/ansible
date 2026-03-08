@@ -4,7 +4,7 @@
   tasks:
     - name: checking shell module
       # ansible.builtin.command: cat /etc/passwd | grep root   #this command will not work as pipe is not supported in command module
-      ansible.builtin.shell: cat /etc/passwd | grep root
+      ansible.builtin.shell: cat /etc/passwd | grep root  #this command will work as shell module supports pipe and other shell features
       register: users_output 
 
     - name: print users output
